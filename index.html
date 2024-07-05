@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Alura Geek</title>
+    <link rel="shortcut icon" href="./img/icon.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header">
+            <img src="./img/logo.png" alt="main logo" height="100px">
+            <h1>Formulario de carga de productos</h1>
+        </div>
+    </header>
+
+    <main>
+        <h2>Productos</h2>
+        <section class="products__container">
+            <div class="cards__container" data-products>
+                
+            </div>
+
+        </section>
+        <section class="admin__form">
+            <h2>Agregar/Eliminar producto</h2>
+            <form class="form__container" data-form>
+                <input type="text" name="nombre__producto" placeholder="Ingresa el nombre del producto" data-name required>
+                <input type="number" name="precio__producto" placeholder="Ingresa el precio del producto" data-price required>
+                <input type="url" name="imagen__producto" placeholder="Ingresa la URL/URI de la imagen" data-url required>
+
+                <div class="control__buttons">
+                    <button type="submit" class="submit__button" data-submit>Agregar</button>
+                    <button type="reset" class="clear__button" data-reset>Limpiar</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
