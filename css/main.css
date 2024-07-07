@@ -1,14 +1,71 @@
-.header {
-    display: inline-flex;
-    align-items: flex-end;
-    flex-direction: row;
-    margin: 20px auto;
-    width: 100%;
+@import url("./cards.css");
+@import url("./formulario.css");
+
+
+:root{
+    font-family: 'Open Sans', sans-serif;
+    --main-color: #001634; 
+    --white: #d4d4d4;
+    --secondary-color: #7B78E5;
 }
 
-h1 {
+body {
+    color: var(--white);
+    background:var(--main-color);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 65%, rgba(4,24,51,1) 100%);
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 65%, rgba(4,24,51,1) 100%);
+    align-items: center;
+}
+
+.header__container h1 {
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    margin: 0 0 0 -200px;
+    color: white;
+}
+
+.header__logo{
+    margin: 0.8rem;
+    height: 5%;
+    width: 15%;
+}
+
+
+main {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    margin: 20px;
+    flex-wrap: nowrap; 
+}
+
+h2 {
     font-size: 24px;
     text-align: center;
     width: 100%;
     font-weight: bold;
+    margin: 10px;
 }
+
+.footer {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.footer__logo {
+    height: 60px;
+}
+

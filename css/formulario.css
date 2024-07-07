@@ -1,0 +1,45 @@
+.admin__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+}
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin: 20px;
+}
+
+.input__item {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    width: 250px;
+    height: 2rem;
+    border: solid 2px dodgerblue;
+}
+
+::placeholder{
+    color: #a2a2a2;
+    opacity: 1;
+    font-size: 12px;
+    font-family: ''Roboto Condensed'', sans-serif; 
+    text-align: center;
+}
+
+.button {
+    background-color: dodgerblue;
+    border-radius: 20px;
+    box-shadow: 2px 2px 0 gray;
+    color: white;
+    cursor: pointer;
+    height: 30px;
+    font-weight: bold;
+    text-align: center;
+    width: 120px;
+}

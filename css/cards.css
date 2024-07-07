@@ -1,0 +1,67 @@
+.cards__section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cards__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.card {
+    margin: 10px;
+    width: 12rem;
+    height: 20rem;
+    text-align: center;
+    background: dodgerblue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 180px;
+    height: 180px;
+    display: block;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.card__info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.card__info p {
+    text-align: center;
+    text-wrap: pretty;
+    margin: 10px 5px;
+    color: white;
+}
+
+.card__price {
+    display: flex;
+    text-align: center;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 5px;
+}
+
+.card__price img {
+   width: 20px;
+   height: 20px;
+   border: none;
+   background-color: none;
+}
