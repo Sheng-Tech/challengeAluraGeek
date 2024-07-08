@@ -1,24 +1,28 @@
 async function listarProductos() {
-    const conexion = await fetch ("https://fake-api-theta-indol.vercel.app/product");
+    const conexion = await fetch("https://fake-api-theta-indol.vercel.app/product", {
+        method: "GET",
+        headers: {
+            "Content-type": "application/json",
+            "Permissions-Policy": "geolocation=(self `https://fake-api-theta-indol.vercel.app/product`)"
+        }
+    });
 
     const conexionConvertida = conexion.json();
-
-    //console.log(conexionConvertida);
 
     return conexionConvertida
 };
 
-async function enviarProducto(img,name,price,description,category,id) {
-    const conexion = await fetch ("https://fake-api-theta-indol.vercel.app/product", {
+async function createProduct(img, name, price, description, category, id) {
+    const conexion = await fetch("https://fake-api-theta-indol.vercel.app/product", {
         method: "POST",
-        headers: {"Content-type": "aplication/json"},
-        body:JSON.stringify ({
-            img:img,
-            name:name,
-            price:price,
-            description:description,
-            category:category,
-            id:id
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify({
+            img: img,
+            name: name,
+            price: `$${price}`,
+            description: description,
+            category: category,
+            id: id
         })
     })
     const conexionConvertida = conexion.json();
@@ -26,7 +30,16 @@ async function enviarProducto(img,name,price,description,category,id) {
     return conexionConvertida;
 }
 
+const deleteProduct = (id) => {
+    return fetch(`https://fake-api-theta-indol.vercel.app/product/${id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    })
+}
+
 
 export const conexionAPI = {
-    listarProductos,enviarProducto
+    listarProductos, createProduct, deleteProduct
 }

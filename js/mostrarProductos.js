@@ -17,6 +17,18 @@ export default function createCard(img, name, price, description, category, id) 
                 </div>
             </div>
         </div>`;
+
+
+    const deleteButton = item.querySelector(".trash__button");
+    deleteButton.addEventListener("click", async () => {
+        try {
+            await conexionAPI.deleteProduct(id);
+            item.remove();
+        } catch (error) {
+            console.log(error);
+        }
+    })
+
     return item;
 
 }

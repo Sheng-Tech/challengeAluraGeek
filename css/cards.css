@@ -29,6 +29,12 @@
     justify-content: space-between;
 }
 
+.card:hover {
+    transform: scale(1.1);
+    transition-duration: 500ms;
+    box-shadow: 3px 3px 0 blue;
+}
+
 .card img {
     width: 180px;
     height: 180px;
@@ -64,4 +70,8 @@
    height: 20px;
    border: none;
    background-color: none;
+}
+
+.trash__button:hover {
+    border: solid 2px red;
 }
